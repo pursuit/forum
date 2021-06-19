@@ -2,6 +2,7 @@ plugins {
 	id 'org.springframework.boot' version '2.5.1'
 	id 'io.spring.dependency-management' version '1.0.11.RELEASE'
 	id 'java'
+	id "org.flywaydb.flyway" version "7.10.0"
 }
 
 group = 'pursuit'
@@ -13,10 +14,21 @@ repositories {
 }
 
 dependencies {
+	// compile "org.flywaydb:flyway-core:7.10.0"
 	implementation 'org.springframework.boot:spring-boot-starter'
+	// implementation 'org.flywaydb:flyway-core'
+	runtimeOnly 'org.postgresql:postgresql'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
 test {
 	useJUnitPlatform()
+}
+
+flyway {
+    // url = 'jdbc:h2:mem:mydb'
+    url = 'jdbc:postgresql://localhost:5432/forum_development'
+    user = 'postgres'
+    password = 'password'
+    // locations = ['classpath:db/migration']
 }
