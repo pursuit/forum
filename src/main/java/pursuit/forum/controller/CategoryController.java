@@ -17,7 +17,7 @@ public class CategoryController {
     private ICategoryService categoryService;
 
 	@GetMapping("/categories")
-	public List<Category> findCategories(@RequestParam(value = "parent_id", defaultValue = "0") int parentId) {
+	public List<Category> findCategories(@RequestParam(value = "parent_id", required = false) Integer parentId) {
 		return categoryService.findByParentId(parentId);
 	}
 }

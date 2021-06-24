@@ -15,8 +15,7 @@ public class CategoryService implements ICategoryService {
     private CategoryRepository repository;
 
     @Override
-    public List<Category> findByParentId(int parentId) {
-        var categories = (List<Category>) repository.findByParentId(parentId);
-        return categories;
+    public List<Category> findByParentId(Integer parentId) {
+        return repository.findByParentId(parentId);
     }
 }
