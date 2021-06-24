@@ -5,6 +5,5 @@ import pursuit.forum.model.Category;
 import java.util.List;
 
 public interface ICategoryService {
-
-    List<Category> findByParentId(int parentId);
+    List<Category> findByParentId(Integer parentId);
 }
