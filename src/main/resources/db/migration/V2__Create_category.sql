@@ -4,7 +4,5 @@ CREATE TABLE categories (
 	name VARCHAR(255) NOT NULL,
 	description VARCHAR(255) NOT NULL,
 	created_at TIMESTAMP NOT NULL,
-	CONSTRAINT fk_categories_parent
-      FOREIGN KEY(parent_id) 
-	  REFERENCES categories(id)
+	CONSTRAINT fk_categories_parent FOREIGN KEY(parent_id) REFERENCES categories(id)
 );
