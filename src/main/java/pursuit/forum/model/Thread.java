@@ -15,14 +15,14 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "threads")
 public class Thread {
 
-    @Id
-    public Integer id;
+	@Id
+	public Integer id;
 
-    @JsonProperty("category_id")
-    public Integer categoryId;
+	@JsonProperty("category_id")
+	public Integer categoryId;
 
-    public String title;
+	public String title;
 
-    @JsonProperty("created_at")
-    public Instant createdAt;
+	@JsonProperty("created_at")
+	public Instant createdAt;
 }

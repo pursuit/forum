@@ -15,15 +15,15 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 @Table(name = "categories")
 public class Category {
 
-    @Id
-    public Integer id;
+	@Id
+	public Integer id;
 
-    @JsonProperty("parent_id")
-    public Integer parentId;
+	@JsonProperty("parent_id")
+	public Integer parentId;
 
-    public String name;
-    public String description;
+	public String name;
+	public String description;
 
-    @JsonProperty("created_at")
-    public Instant createdAt;
+	@JsonProperty("created_at")
+	public Instant createdAt;
 }

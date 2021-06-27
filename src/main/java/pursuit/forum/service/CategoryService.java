@@ -11,11 +11,11 @@ import org.springframework.stereotype.Service;
 @Service
 public class CategoryService implements ICategoryService {
 
-    @Autowired
-    private CategoryRepository repository;
+	@Autowired
+	private CategoryRepository repository;
 
-    @Override
-    public List<Category> findByParentId(Integer parentId) {
-        return repository.findByParentId(parentId);
-    }
+	@Override
+	public List<Category> findByParentId(Integer parentId) {
+	    return repository.findByParentId(parentId);
+	}
 }
