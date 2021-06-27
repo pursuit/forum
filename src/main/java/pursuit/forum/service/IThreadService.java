@@ -1,9 +1,11 @@
 package pursuit.forum.service;
 
+import java.util.List;
+import java.util.Optional;
+
 import pursuit.forum.model.Thread;
 
-import java.util.List;
-
 public interface IThreadService {
-    List<Thread> findByCategoryId(int categoryId);
+	Optional<Thread> find(int id);
+	List<Thread> findByCategoryId(int categoryId);
 }
